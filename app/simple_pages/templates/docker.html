@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% block title %}Docker{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="card border-light mb-3 mt-2">
+        <h2 class="card-header">Docker - Open Source Containerization Platform</h2>
+        <div class="card-body">
+            <h5 class="card-title">Introduction</h5>
+            <p class="card-text">Docker is an open platform for developing, shipping, and running applications. Docker
+                enables us to separate our applications from our infrastructure, so we can deliver software quickly.
+                With Docker:
+            <ul>
+                <li>We can manage our infrastructure in the same ways we manage our applications</li>
+                <li>We can ship, test, and deploy code quickly</li>
+                <li>Reduce the delay between writing code and running it in production.</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: fit-content">
+                <div class="card-header text-dark">Container</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">A container is a standard unit of software that packages up code and all its
+                        dependencies so the application runs quickly and reliably from one computing environment to
+                        another. A Docker container image is a lightweight, standalone, executable package of software
+                        that includes everything needed to run an application: code, runtime, system tools, system
+                        libraries and settings.
+                    </p>
+                    <p>Containers isolate software from its environment and ensure that it works uniformly despite
+                        differences for instance between development and staging.Containers share the machine’s OS
+                        system kernel and therefore do not require an OS per application, driving higher server
+                        efficiencies and reducing server and licensing costs</p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                    <h6 class="card-title">Command:</h6>
+                    <ul>
+                        <li>docker container create <p>Create a new container</p></li>
+                        <li>docker container exec <p>Run a command in a running container</p></li>
+                        <li>docker container kill <p>Kill one or more running containers</p></li>
+                        <li>docker container ls <p>List containers</p></li>
+                        <li>docker container commit <p>Create a new image from a container’s changes</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: fit-content; max-height: fit-content">
+                <div class="card-header text-dark">Images</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">A Docker image is a read-only template that contains a set of instructions for
+                        creating a container that can run on the Docker platform. It provides a convenient way to
+                        package up applications and preconfigured server environments, which we can use for our own
+                        private use or share publicly with other Docker users. Docker images are also the starting point
+                        for anyone using Docker for the first time.</p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                    <h6 class="card-title">Command:</h6>
+                    <ul>
+                        <li>docker image build <p> Build an image from a Dockerfile</p></li>
+                        <li>docker image load <p> Load an image from a tar archive or STDIN</p></li>
+                        <li>docker image ls <p> List images</p></li>
+                        <li>docker image pull <p> Pull an image or a repository from a registry</p></li>
+                        <li>docker image push <p> Push an image or a repository to a registry</p></li>
+                        <li>docker image save <p> Save one or more images to a tar archive</p></li>
+                        <li>docker image tag <p> Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE</p></li>
+                        <li>docker image rm <p> Remove one or more images</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: fit-content; max-height: fit-content">
+                <div class="card-header text-dark">Docker Hub & Registry</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">A Docker registry is a service that hosts and distributes Docker images.
+                        A registry will consist of multiple repositories which contain images related to
+                        a specific project. Within a given repository tags are used to differentiate between versions of
+                        an image. We can pull (download) images we want to use or push (upload)
+                        images we want to store in a registry. By providing a centralized source for images, registries
+                        can help enable tighter version control and make it easier to manage and distribute images.
+                    </p>
+                    <p>
+                        Docker Hub is Docker’s official cloud-based registry for Docker images.
+                    </p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                    <h6 class="card-title">To create Repository in Docker hub</h6>
+                    <ul>
+                        <li>Login to Docker Hub account and click <span class="text-dark">Create Repository</span></li>
+                        <li>Give repository a name and description, select public and then click Create</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: fit-content">
+                <div class="card-header text-dark">To run the application stack</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">Docker Compose is a tool to help define and share
+                        multi-container applications. With Compose, we can create a YAML file to define the services and
+                        with a single command, can spin everything up or tear it all down.
+                    </p>
+
+                    <h6 class="card-title">To get started</h6>
+                    <ul>
+                        <li>Create the compose file at the root of the app project</li>
+                        <li>Define the app services</li>
+                        <li>Run the application stack using docker compose up --build command</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: fit-content">
+                <div class="card-header text-dark">Other Useful Commands</div>
+                <div class="card-body text-dark">
+                    <ul>
+                        <li>docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+                            <p>Creates a writeable container layer over the specified image, and then starts it using
+                                the specified command</p>
+                            <p>Ex: docker run -dp 80:80 docker/getting-started</p>
+                        </li>
+                        <li>docker ps
+                            <p>
+                                List Containers
+                            </p>
+                        </li>
+                        <li>docker build [OPTIONS] PATH | URL | -
+                            <p>builds Docker images from a Dockerfile. A build’s context is the set of
+                                files located in the specified PATH or URL. </p>
+                            <p>Ex: docker build -t getting-started .</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

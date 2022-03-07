@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block title %}Git{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="card border-light mb-3 mt-2">
+        <h2 class="card-header">Git - Free and Open Source Distributed Version Control System</h2>
+        <div class="card-body">
+            <h5 class="card-title">Introduction</h5>
+            <p class="card-text">Git is a popular version control system. It is used for:
+            <ul>
+                <li>Tracking code changes</li>
+                <li>Tracking who made changes</li>
+                <li>Coding Collaboration</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: fit-content">
+                <div class="card-header text-dark">Branch</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">Branch in Git is similar to the branch of a tree. A tree branch
+                        is attached to the central part of the tree called the trunk. While branches can generate and
+                        fall off, the trunk remains compact and is the only part by which we can say the tree is alive
+                        and standing. </p>
+                    <p>Similarly, a branch in Git is a way to keep developing and coding a new feature or
+                        modification to the software and still not affecting the main part of the project.A branch
+                        represents an independent line of development.
+                        The primary or default branch in Git is the master branch
+                    </p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                    <h6 class="card-title">Command: git branch</h6>
+                    <p>List all our branches. A * will appear next to the currently active branch</p>
+
+                    <h6 class="card-title">Command: git branch [branch-name]</h6>
+                    <p>Create a new branch at the current commit</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: 22rem; max-height: fit-content">
+                <div class="card-header text-dark">Repository</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">A Git repository is the .git/ folder inside a project. This repository tracks
+                        all changes made to files in our project, building a history over time. If we delete
+                        the .git/ folder, then we delete our project’s history.</p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                    <h6 class="card-title">Command: git init</h6>
+                    <p>Initialize an existing directory as a Git repository</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: 30rem; max-height: fit-content">
+                <div class="card-header text-dark">Merge</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">The git merge command integrates the independent lines of development into a
+                        single branch. The primary use of git merge is to combine two branches. It uses a
+                        non-destructive operation to combine two branches histories without changing them. In addition,
+                        it creates a new merge commit every time it’s used.
+                    </p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                    <h6 class="card-title">Command: git merge [branch]</h6>
+                    <p>Merge the specified branch’s history into the current one</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: 22rem">
+                <div class="card-header text-dark">Tag</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">Tags are references that point to specific points in Git history. Tagging is
+                        generally used to capture a point in history that is used for a marked version release. A tag is
+                        like a branch that doesn’t change. Unlike branches, tags, after being created,
+                        have no further history of commits.
+                    </p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                    <h6 class="card-title">Command: git tag [tagname]</h6>
+                    <p>Creates a new tag</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: 30rem">
+                <div class="card-header text-dark">Commit</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">Commit is used to save our staged changes to the local repository.
+                        We have to explicitly tell Git which changes we want to include in a commit before
+                        running the "git commit" command. This means that a file won't be automatically included in the
+                        next commit just because it was changed. Instead, we need to use the "git add" command to mark
+                        the desired changes for inclusion.
+                    </p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                    <h6 class="card-title">Command: git commit -m [descriptive message]</h6>
+                    <p>Commit our staged content as a new commit snapshot</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

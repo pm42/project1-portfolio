@@ -1,4 +1,94 @@
 {% extends "base.html" %}
+{% block title %}Home{% endblock %}
 {% block content %}
-    Index Page
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 0"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 3"></button>
+
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="{{ url_for('simple_pages.show', page='git')}}">
+                <img src="{{ url_for('static', filename='images/git.png') }}" class="d-block w-100 h-100"
+                     alt="Git"></a>
+        </div>
+        <div class="carousel-item">
+            <a href="{{ url_for('simple_pages.show', page='docker')}}">
+                <img src="{{ url_for('static', filename='images/docker.jpeg') }}" class="d-block w-100 h-100"
+                     alt="Docker"></a>
+        </div>
+
+        <div class="carousel-item">
+            <a href="{{ url_for('simple_pages.show', page='flask')}}">
+                <img src="{{ url_for('static', filename='images/flask.png') }}" class="d-block w-100 h-100"
+                     alt="Python Flask"></a>
+        </div>
+
+        <div class="carousel-item">
+            <a href="{{ url_for('simple_pages.show', page='cicd')}}">
+                <img src="{{ url_for('static', filename='images/cicd.jpeg') }}" class="d-block w-100 h-100"
+                     alt="CICD"></a>
+        </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card" style="width: fit-content;">
+                <div class="card-body">
+                    <h5 class="card-title">About Me</h5>
+                    <p class="card-text">Result-oriented software engineer looking to solve impactful business problems
+                        through the development, design, and implementation of software and ongoing business projects.
+                        Inspired by background in ERP consulting and automated solutions to pivot towards software
+                        engineer and developer roles.</p>
+
+                    <p class="card-text">
+                        Currently pursuing M.S. in Computer Science to further advance knowledge on efficient code,
+                        quality assurance procedures, end user training, software tools, and operational practicality.
+                        Demonstrates a strong understanding of the entire business, and collaborates cross-functionally
+                        with other developers, business systems analysts, and UX designers to produce successful
+                        deliverables.</p>
+
+                    <h5 class="card-title">Awards - Where I Shine</h5>
+                    <p class="card-text">
+                    <ul>
+                        <li>Associate of the Quarter - Cognizant Technology Solutions</li>
+                        <li>Going the Extra Mile - Cognizant Technology Solutions</li>
+                        <li>Special Performer of the Team - Robert Bosch</li>
+                    </ul>
+                    </p>
+                    <h5 class="card-title">Interests - Out Of Office</h5>
+                    <p class="card-text">
+                    <ul>
+                        <li>Photography</li>
+                        <li>Travel</li>
+                        <li>Cooking</li>
+                        <li>Badminton</li>
+                        <li>Tennis</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
 {% endblock %}
