@@ -11,6 +11,8 @@ on:
       - 'master'
     types:
       - closed
+    tags:
+      - 'v*'
 jobs:
   runtest:
     if: github.event.pull_request.merged == true

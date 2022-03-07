@@ -7,7 +7,7 @@
 
 [![Development Workflow](https://github.com/pm42/project1-portfolio/actions/workflows/dev.yml/badge.svg)](https://github.com/pm42/project1-portfolio/actions/workflows/dev.yml)
 
-* [Developmental Deployment](https://pm42-project1-dev.herokuapp.com/)
+* [Development Deployment](https://pm42-project1-dev.herokuapp.com/)
 
 ## Setting up CI/CD
 
