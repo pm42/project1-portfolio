@@ -45,7 +45,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: pm42/prj1-flaskbase
+          images: pm42/prj1-flaskbase:master
 
       - name: Build and push
         uses: docker/build-push-action@v2
