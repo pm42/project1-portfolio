@@ -6,11 +6,6 @@ on:
       - 'master'
     tags:
       - 'v*'
-  pull_request:
-    branches:
-      - 'master'
-    types:
-      - closed
 
 jobs:
   runtest:
@@ -46,7 +41,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: pm42/prj1-flaskbase:master
+          images: pm42/prj1-flaskbase
 
       - name: Build and push
         uses: docker/build-push-action@v2
