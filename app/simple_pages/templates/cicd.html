@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+{% block title %}CICD{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="card border-light mb-3 mt-2">
+        <h2 class="card-header">Continuous Integration and Deployment</h2>
+        <div class="card-body">
+            <h5 class="card-title">Introduction</h5>
+            <p class="card-text">CI/CD is a method to frequently deliver apps to customers by introducing automation
+                into the stages of app development. The main concepts attributed to CI/CD are continuous integration,
+                continuous delivery, and continuous deployment. CI/CD is a solution to the problems integrating new code
+                can cause for development and operations teams. CI/CD introduces ongoing automation and continuous
+                monitoring throughout the lifecycle of apps, from integration and testing phases to delivery and
+                deployment.
+            </p>
+
+            <p>
+                Successful CI means new code changes to an app are regularly built, tested, and merged to a shared
+                repository. It’s a solution to the problem of having too many branches of an app in development at once
+                that might conflict with each other.
+            </p>
+
+            <p>
+                Continuous deployment refer to automatically releasing a developer’s
+                changes from the repository to production, where it is usable by customers. It addresses the problem of
+                overloading operations teams with manual processes that slow down app delivery. It builds on the
+                benefits of continuous delivery by automating the next stage in the pipeline.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: fit-content">
+                <div class="card-header text-dark">GitHub Actions</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">GitHub Actions is a continuous integration and continuous delivery (CI/CD)
+                        platform that allows us to automate our build, test, and deployment pipeline. We can create
+                        workflows that build and test every pull request to our repository, or deploy merged pull
+                        requests to production.
+                    </p>
+                    <h6 class="card-title">Current Project Setup:</h6>
+                    <p>Workflow yml files are available under .github/workflows</p>
+                    <ul>
+                        <li>
+                            Development Workflow:
+                            <p>
+                                Whenever there is a pull request event to the master branch, following two jobs will be
+                                triggered:
+                            <ul>
+                                <li>
+                                    Run_Pytest <p>
+                                    <ul>
+                                        <li>
+                                            Jobs run on the latest version of ubuntu linux runner
+                                        </li>
+                                        <li>
+                                            Uses the v2 of the actions/checkout action
+                                        </li>
+                                        <li>
+                                            Installs python version 3.8
+                                        </li>
+                                        <li>
+                                            Executes the command python -m pip install --upgrade & pip
+                                            pip install -r requirements.txt on the runner
+                                        </li>
+                                        <li>
+                                            Executes the command pyest on the runner
+                                        </li>
+                                    </ul>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    Deploy_Heroku <p>
+                                    <ul>
+                                        <li>
+                                            Jobs run on the latest version of ubuntu linux runner
+                                        </li>
+                                        <li>
+                                            Uses the v2 of the actions/checkout and v3.12.12 of the
+                                            akhileshns/heroku-deploy action
+                                        </li>
+                                        <li>
+                                            Uses heroku_api_key for authentication. This is found in heroku homepage
+                                            account settings and should be added to
+                                            Github repository under settings -> secrets.
+                                        </li>
+                                        <li>
+                                            Uses heroku_email. E-mail that we use with heroku
+                                        </li>
+                                        <li>
+                                            Uses heroku_app_name for deploying
+                                        </li>
+                                        <li>
+                                            Deploys using Dockerfile in project root
+                                        </li>
+                                    </ul>
+                                    </p>
+                                </li>
+                            </ul>
+                            </p>
+                        </li>
+                         <li>
+                            Production Workflow:
+                            <p>
+                                Whenever there is a pull request event to the master branch, following two jobs will be
+                                triggered:
+                            <ul>
+                                <li>
+                                    Run_Pytest <p>
+                                    <ul>
+                                        <li>
+                                            Jobs run on the latest version of ubuntu linux runner
+                                        </li>
+                                        <li>
+                                            Uses the v2 of the actions/checkout action
+                                        </li>
+                                        <li>
+                                            Installs python version 3.8
+                                        </li>
+                                        <li>
+                                            Executes the command python -m pip install --upgrade & pip
+                                            pip install -r requirements.txt on the runner
+                                        </li>
+                                        <li>
+                                            Executes the command pyest on the runner
+                                        </li>
+                                    </ul>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    Deploy_Heroku <p>
+                                    <ul>
+                                        <li>
+                                            Jobs run on the latest version of ubuntu linux runner
+                                        </li>
+                                        <li>
+                                            Uses the v2 of the actions/checkout and v3.12.12 of the
+                                            akhileshns/heroku-deploy action
+                                        </li>
+                                        <li>
+                                            Uses heroku_api_key for authentication. This is found in heroku homepage
+                                            account settings and should be added to
+                                            Github repository under settings -> secrets.
+                                        </li>
+                                        <li>
+                                            Uses heroku_email. E-mail that we use with heroku
+                                        </li>
+                                        <li>
+                                            Uses heroku_app_name for deploying
+                                        </li>
+                                        <li>
+                                            Deploys using Dockerfile in project root
+                                        </li>
+                                    </ul>
+                                    </p>
+                                </li>
+                            </ul>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: 22rem; max-height: fit-content">
+                <div class="card-header text-dark">Repository</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">A Git repository is the .git/ folder inside a project. This repository tracks
+                        all changes made to files in our project, building a history over time. If we delete
+                        the .git/ folder, then we delete our project’s history.</p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                    <h6 class="card-title">Command: git init</h6>
+                    <p>Initialize an existing directory as a Git repository</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: 30rem; max-height: fit-content">
+                <div class="card-header text-dark">Merge</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">The git merge command integrates the independent lines of development into a
+                        single branch. The primary use of git merge is to combine two branches. It uses a
+                        non-destructive operation to combine two branches histories without changing them. In addition,
+                        it creates a new merge commit every time it’s used.
+                    </p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                    <h6 class="card-title">Command: git merge [branch]</h6>
+                    <p>Merge the specified branch’s history into the current one</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: 22rem">
+                <div class="card-header text-dark">Tag</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">Tags are references that point to specific points in Git history. Tagging is
+                        generally used to capture a point in history that is used for a marked version release. A tag is
+                        like a branch that doesn’t change. Unlike branches, tags, after being created,
+                        have no further history of commits.
+                    </p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                    <h6 class="card-title">Command: git tag [tagname]</h6>
+                    <p>Creates a new tag</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-auto">
+            <div class="card border-dark mb-3" style="max-width: 30rem">
+                <div class="card-header text-dark">Commit</div>
+                <div class="card-body text-dark">
+                    <p class="card-text">Commit is used to save our staged changes to the local repository.
+                        We have to explicitly tell Git which changes we want to include in a commit before
+                        running the "git commit" command. This means that a file won't be automatically included in the
+                        next commit just because it was changed. Instead, we need to use the "git add" command to mark
+                        the desired changes for inclusion.
+                    </p>
+                </div>
+                <div class="card-footer bg-transparent border-dark">
+                    <h6 class="card-title">Command: git commit -m [descriptive message]</h6>
+                    <p>Commit our staged content as a new commit snapshot</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+{% block title %}Flask{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="card border-light mb-3 mt-2">
+        <h2 class="card-header">Flask - Micro Web Framework written in Python</h2>
+        <div class="card-body">
+            <h5 class="card-title">Introduction</h5>
+            <p class="card-text">Flask is a web framework, it’s a Python module that lets us develop web applications
+                easily. It has a small and easy-to-extend core: it’s a microframework that doesn’t include an ORM
+                (Object Relational Manager) or such features. It does have many cool features like url routing, template
+                engine.
+                It is a WSGI web app framework.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card mb-3">
+                <img class="card-img-top" src="{{ url_for('static', filename='images/flask-webpage.png') }}"
+                     alt="Flask Simple Web Page">
+                <div class="card-body">
+                    <h5 class="card-title">A Simple Web Page Using Flask</h5>
+                    <p class="card-text">
+                    <ul>
+                        <li>First we imported the Flask class. An instance of this class will be our WSGI application
+                        </li>
+                        <li>Next we created an instance of this class. The first argument is the name of the
+                            application’s module or package
+                        </li>
+                        <li>
+                            We then used the route() decorator to tell Flask what URL should trigger our function
+                        </li>
+                        <li>
+                            The function returns the message we want to display in the browser.
+                            The default content type is HTML, so HTML in the string will be rendered by the browser.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-auto ">
+            <div class="card mb-3" style="width: 50rem;">
+                <img class="card-img-top" src="{{ url_for('static', filename='images/static.png') }}"
+                     alt="Static File Rendering">
+                <div class="card-body">
+                    <h5 class="card-title">Static Files Rendering</h5>
+                    <p class="card-text">
+                        Our web applications needs static files. That’s usually where the CSS and JavaScript
+                        files are coming from. Ideally our web server is configured to serve them for us, but during
+                        development Flask can do that as well.</p>
+                    <p>For that we just need to create a folder called static in our package or
+                        next to our module, and it will be available at /static on the application. </p>
+
+                    <p> To generate URLs for static files, we use the special 'static' endpoint name.
+                        The file has to be stored on the filesystem as static/style.css.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mb-3" style="width: 50rem;">
+                <img class="card-img-top" src="{{ url_for('static', filename='images/template_rendering.png') }}"
+                     alt="Template Rendering">
+                <div class="card-body">
+                    <h5 class="card-title">Rendering Templates</h5>
+                    <p class="card-text">
+                        To render a template we use the render_template() method. All we have to do is provide the
+                        name of the template and the variables we want to pass to the template engine as keyword
+                        arguments</p>
+
+                    <p> Flask will look for templates in the templates folder. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-3">
+                <img class="card-img-top" src="{{ url_for('static', filename='images/blueprint.png') }}"
+                     alt="Blueprint Concept">
+                <div class="card-body">
+                    <h5 class="card-title">Blueprint Concept</h5>
+                    <p class="card-text">
+                        The basic concept of blueprints is that they record operations to execute when registered on
+                        an
+                        application. Flask associates view functions with blueprints when dispatching requests and
+                        generating URLs from one endpoint to another.
+                    </p>
+
+                    <p>
+                        When we bind a function with the help of the @simple_page.route decorator, the blueprint
+                        will
+                        record the intention of registering the function show on the application when it’s later
+                        registered.Additionally, it will prefix the endpoint of the function with the name of the
+                        blueprint which was given to the Blueprint constructor (in this case simple_page). The
+                        blueprint’s name does not modify the URL, only the endpoint.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-dark text-white">
+                <img class="card-img" src="{{ url_for('static', filename='images/register_bp.png') }}"
+                     alt="Registering Blueprint">
+                <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+                    <h5 class="card-title">Registering Blueprints</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-7">
+            <div class="card">
+                <h5 class="card-header">Testing Flask Applications Using Pytest</h5>
+                <div class="card-body">
+                    <p class="card-text">Flask provides utilities for testing an application. We are using pytest
+                        framework to set up and run our tests
+                    <p> Tests are typically located in the tests folder. Tests are functions that start with test_, in
+                        Python modules that start with test_.</p>
+                    <p>
+                    <ul>
+                        <li>
+                            Client has methods that match the common HTTP request methods, such as client.get()
+                        </li>
+                        <li>
+                            To make a request, we call the method the request should use with the path to the route to
+                            test
+                        </li>
+                        <li>
+                            A TestResponse is returned to examine the response data. It has all the usual properties of
+                            a response object
+                        </li>
+                        <li>We then check the response.data for a specific text to complete the validation</li>
+                        <li>To run pytest, from Docker services open the docker flask application and then create
+                            terminal and run pytest
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card bg-dark text-white">
+                <img class="card-img" src="{{ url_for('static', filename='images/pytest.png') }}"
+                     alt="Registering Blueprint">
+                <div class="card-footer">
+                    <h5 class="card-title">Pytest Script</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-md-3">
+        <div class="col-md-7">
+            <div class="card">
+                <h5 class="card-header">Project Layout</h5>
+                <div class="card-body">
+                    <p class="card-text">The project directory will contain:</p>
+                    <ul>
+                        <li>Dockerfile <p> File used to create an image to run in a container that runs the program</p>
+                        </li>
+                        <li>
+                            app - Package containing our application code and files
+                            <ul>
+                                <li>
+                                    __init.py__ - Python file that creates and configures an instance of the Flask
+                                    application
+                                </li>
+                                <li>
+                                    simple_pages
+                                    <ul>
+                                        <li>templates - Contains the .html files for our web page
+                                        </li>
+                                        <li>__init__.py - Python file that registers the blueprint and contains code for
+                                            routing and rendering the template
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    static
+                                    <ul>
+                                        <li>css - Folder containing the css files that are used in our web
+                                            application
+                                        </li>
+                                        <li>
+                                            images - Folder containing the images that are used in our web application
+                                        </li>
+                                        <li>
+                                            js - Folder containing the javascript files that are used in our web
+                                            application
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>docker-compose.yml <p> Orchestration file that contains the configuration to develop locally,
+                            it overrides the Dockerfile to run the flask development server instead of running the
+                            gunicorn server that is used for hosting on Heroku<</p>
+                        </li>
+
+                        <li>
+                            heroku.yml <p> A manifest file that allows us to build Docker images and specifies the release phase on Heroku</p>
+                        </li>
+                        <li>
+                            readme.md <p> A markdown file that introduces and explains our project. It contains Github Workflow badges and Heroku URL</p>
+                        </li>
+                        <li>
+                            requirements.txt <p> A text file specifying the python packages that are required to run our project</p>
+                        </li>
+                        <li>
+                            tests <p> Contains python file that contains code to test our web page</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card bg-dark text-white">
+                <img class="card-img" src="{{ url_for('static', filename='images/layout.png') }}"
+                     alt="Registering Blueprint">
+                <div class="card-footer">
+                    <h5 class="card-title">Project Layout</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
