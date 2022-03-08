@@ -2,7 +2,7 @@
 {% block title %}Git{% endblock %}
 {% block content %}
 <div class="container">
-    <div class="card border-light mb-3 mt-2">
+    <div class="card border-dark mb-3 mt-2">
         <h2 class="card-header">Git - Free and Open Source Distributed Version Control System</h2>
         <div class="card-body">
             <h5 class="card-title">Introduction</h5>
@@ -21,7 +21,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-auto">
-            <div class="card border-dark mb-3" style="max-width: fit-content">
+            <div class="card bg-light mb-3" style="max-width: fit-content">
                 <div class="card-header text-dark">Branch</div>
                 <div class="card-body text-dark">
                     <p class="card-text">Branch in Git is similar to the branch of a tree. A tree branch
@@ -43,9 +43,10 @@
                 </div>
             </div>
         </div>
-
+    </div>
+    <div class="row">
         <div class="col-md-auto">
-            <div class="card border-dark mb-3" style="max-width: 22rem; max-height: fit-content">
+            <div class="card bg-light mb-3" style="max-width: 22rem; max-height: fit-content">
                 <div class="card-header text-dark">Repository</div>
                 <div class="card-body text-dark">
                     <p class="card-text">A Git repository is the .git/ folder inside a project. This repository tracks
@@ -60,7 +61,7 @@
         </div>
 
         <div class="col-md-auto">
-            <div class="card border-dark mb-3" style="max-width: 30rem; max-height: fit-content">
+            <div class="card bg-light mb-3" style="max-width: 30rem; max-height: fit-content">
                 <div class="card-header text-dark">Merge</div>
                 <div class="card-body text-dark">
                     <p class="card-text">The git merge command integrates the independent lines of development into a
@@ -75,11 +76,20 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-md-4">
+            <div class="card bg-dark text-white">
+                <img class="card-img" src="{{ url_for('static', filename='images/gitcmd.png') }}" alt="Dev Workflow">
+                <div class="card-footer">
+                    <h5 class="card-title">Git Commands</h5>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="row">
         <div class="col-md-auto">
-            <div class="card border-dark mb-3" style="max-width: 22rem">
+            <div class="card bg-light mb-3" style="max-width: 22rem">
                 <div class="card-header text-dark">Tag</div>
                 <div class="card-body text-dark">
                     <p class="card-text">Tags are references that point to specific points in Git history. Tagging is
@@ -95,7 +105,7 @@
             </div>
         </div>
         <div class="col-md-auto">
-            <div class="card border-dark mb-3" style="max-width: 30rem">
+            <div class="card bg-light mb-3" style="max-width: 30rem">
                 <div class="card-header text-dark">Commit</div>
                 <div class="card-body text-dark">
                     <p class="card-text">Commit is used to save our staged changes to the local repository.
@@ -108,6 +118,14 @@
                 <div class="card-footer bg-transparent border-dark">
                     <h6 class="card-title">Command: git commit -m [descriptive message]</h6>
                     <p>Commit our staged content as a new commit snapshot</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-dark text-white">
+                <img class="card-img" src="{{ url_for('static', filename='images/gitmerge.jpeg') }}" alt="Dev Workflow">
+                <div class="card-footer">
+                    <h5 class="card-title">Git Merge</h5>
                 </div>
             </div>
         </div>
