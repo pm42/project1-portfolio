@@ -2,7 +2,7 @@
 {% block title %}CICD{% endblock %}
 {% block content %}
 <div class="container">
-    <div class="card border-light mb-3 mt-2">
+    <div class="card border-dark mb-3 mt-2">
         <h2 class="card-header">Continuous Integration and Deployment</h2>
         <div class="card-body">
             <h5 class="card-title">Introduction</h5>
@@ -34,9 +34,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-auto">
-            <div class="card border-dark mb-3" style="max-width: fit-content">
-                <div class="card-header text-dark">GitHub Actions</div>
-                <div class="card-body text-dark">
+            <div class="card text-white bg-secondary mb-3" style="max-width: fit-content">
+                <div class="card-header">GitHub Actions</div>
+                <div class="card-body">
                     <p class="card-text">GitHub Actions is a continuous integration and continuous delivery (CI/CD)
                         platform that allows us to automate our build, test, and deployment pipeline. We can create
                         workflows that build and test every pull request to our repository, or deploy merged pull
@@ -198,8 +198,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6">
-            <div class="card border-dark mb-3" style="max-width: fit-content; max-height: fit-content">
+        <div class="col-md-5">
+            <div class="card bg-light mb-3" style="max-width: fit-content; max-height: fit-content">
                 <div class="card-header text-dark">Code Review Process</div>
                 <div class="card-body text-dark">
                     <p class="card-text">When we compare and pull request from branch to master, development workflow
@@ -213,10 +213,18 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-7">
+            <div class="card bg-dark text-white">
+                <img class="card-img" src="{{ url_for('static', filename='images/devyml.png') }}" alt="Dev Workflow">
+                <div class="card-footer">
+                    <h5 class="card-title">Development Workflow</h5>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row">
-        <div class="col-md-6">
-            <div class="card border-dark mb-3" style="max-width: fit-content; max-height: fit-content">
+        <div class="col-md-5">
+            <div class="card bg-light mb-3 mb-3" style="max-width: fit-content; max-height: fit-content">
                 <div class="card-header text-dark">Production Deployment</div>
                 <div class="card-body text-dark">
                     <p class="card-text">When we merge or push request to the master, production workflow
@@ -236,6 +244,14 @@
                         Finally the docker image built from the build-container job is used to deploy to the heroku
                         production app.
                     </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="card bg-dark text-white">
+                <img class="card-img" src="{{ url_for('static', filename='images/prdyml.png') }}" alt="Dev Workflow">
+                <div class="card-footer">
+                    <h5 class="card-title">Production Workflow</h5>
                 </div>
             </div>
         </div>
