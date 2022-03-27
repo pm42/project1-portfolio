@@ -33,4 +33,6 @@ class Division:
     @staticmethod
     def divide(value_1, value_2):
         """ This is the divide method"""
+        if value_2 == 0:
+            return "Error: Cannot divide by Zero"
         return value_1 / value_2
