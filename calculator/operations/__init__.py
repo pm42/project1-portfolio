@@ -33,4 +33,4 @@ class Division:
     @staticmethod
     def divide(value_1, value_2):
         """ This is the divide method"""
-        return value_2 / value_1
+        return value_1 / value_2
