@@ -1,5 +1,5 @@
 """Testing the Calculator"""
-# From specifies the namespace
+
 from calculator import Calculator
 
 
@@ -21,7 +21,7 @@ def test_calculator_add_method():
 
 def test_calculator_subtract_method():
     """Testing the Calculator Subtract"""
-    assert Calculator.subtract(tuple_list()) == -3
+    assert Calculator.subtract(tuple_list()) == -1
 
 
 def test_calculator_multiply_method():

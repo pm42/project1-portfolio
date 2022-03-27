@@ -34,7 +34,7 @@ def test_calculation_subtract_get_result_method():
     """Testing the Calculator Subtract"""
     tuple_list = (1, 2)
     calculation = Subtraction.create(tuple_list)
-    assert calculation.get_result() == -3
+    assert calculation.get_result() == -1
 
 
 def test_calculation_multiply_get_result_method():
