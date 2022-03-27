@@ -1,9 +1,8 @@
 """ This is the Calculator Class"""
-from calculator.calculations import Addition, Subtraction, Multiplication, Divison
+from calculator.calculations import Addition, Subtraction, Multiplication, Division
 
 
 class Calculator:
-    """ This is the default result property"""
 
     @staticmethod
     def add(tuple_list):

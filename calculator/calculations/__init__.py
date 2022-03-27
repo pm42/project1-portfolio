@@ -1,5 +1,5 @@
-"""Calculation and Addition, Multiplication, and Subtraction Classes """
-from calculator.operations import Addition as Add, Subtraction as Sub, Multiplication as Mult
+"""Calculation, Addition, Multiplication, Subtraction and Division Classes """
+from calculator.operations import Addition as Add, Subtraction as Sub, Multiplication as Mult, Division as Div
 
 
 class Calculation:
@@ -18,11 +18,6 @@ class Calculation:
     @staticmethod
     def convert_args_to_tuple_of_float(tuple_list):
         """ standardize values to list of floats"""
-        # lists can be modified and tuple cannot, tuple are faster.
-        # We need to convert the tuple of potentially random data types (its raw data)
-        # into a standard data format to keep things consistent so we convert it to float
-        # then i make it a tuple again because i actually won't need to change the calculation values
-        # I can also use it as a list and then i would be able to edit the calculation
         list_values_float = []
         for item in tuple_list:
             list_values_float.append(float(item))
@@ -60,3 +55,14 @@ class Subtraction(Calculation):
         for value in self.values:
             difference_of_values = Sub.subtract(difference_of_values, value)
         return difference_of_values
+
+
+class Division(Calculation):
+    """division calculation object"""
+
+    def get_result(self):
+        """get the division results"""
+        result = 1.0
+        for value in self.values:
+            result = Div.divide(result, value)
+        return result
