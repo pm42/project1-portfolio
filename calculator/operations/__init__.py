@@ -27,4 +27,4 @@ class Multiplication:
     @staticmethod
     def multiply(value_1, value_2):
         """ This is the add method"""
-        return value_1 *
+        return value_1 * value_2
