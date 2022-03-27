@@ -52,8 +52,11 @@ class Subtraction(Calculation):
     def get_result(self):
         """get the subtraction results"""
         difference_of_values = 0.0
-        for value in self.values:
-            difference_of_values = Sub.subtract(difference_of_values, value)
+        for index, value in enumerate(self.values):
+            if index == 0:
+                difference_of_values = value
+            else:
+                difference_of_values = Sub.subtract(difference_of_values, value)
         return difference_of_values
 
 
@@ -63,6 +66,9 @@ class Division(Calculation):
     def get_result(self):
         """get the division results"""
         result = 1.0
-        for value in self.values:
-            result = Div.divide(result, value)
+        for index, value in enumerate(self.values):
+            if index == 0:
+                result = value
+            else:
+                result = Div.divide(result, value)
         return result
