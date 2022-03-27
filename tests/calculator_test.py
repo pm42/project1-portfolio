@@ -43,6 +43,18 @@ def test_calculator_divide_method():
 
     # Act for AAA testing
     result = Calculator.divide(tuple_list())
-    print(result)
+
     # Assertion for AAA testing
     assert result == 0.5
+
+
+def test_calculator_divide_by_zero():
+    """Testing the Calculator Multiplication"""
+    # Arrange Data for AAA testing
+    tuples_list = (3, 0)
+
+    # Act for AAA testing
+    result = Calculator.divide(tuples_list)
+
+    # Assertion for AAA testing
+    assert result == "Error: Cannot divide by Zero"
