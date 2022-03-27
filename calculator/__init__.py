@@ -25,5 +25,5 @@ class Calculator:
     @staticmethod
     def divide(tuple_list):
         """ This is the division method"""
-        calculation = Divison.create(tuple_list)
+        calculation = Division.create(tuple_list)
         return calculation.get_result()
