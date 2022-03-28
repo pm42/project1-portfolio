@@ -3,17 +3,13 @@
 {% block glossary %}active{% endblock %}
 {% block content %}
 <div class="container">
-    <div class="card border-dark mb-3 mt-2">
-        <h2 class="card-header">Git - Free and Open Source Distributed Version Control System</h2>
+    <div class="card border-light mb-3 my-2">
+        <h2 class="card-header">Glossary - OOPs terms with definition </h2>
         <div class="card-body">
-            <h5 class="card-title">Introduction</h5>
-            <p class="card-text">Git is a popular version control system. It is used for:
-            <ul>
-                <li>Tracking code changes</li>
-                <li>Tracking who made changes</li>
-                <li>Coding Collaboration</li>
-            </ul>
-            </p>
+            <h5 class="card-title">Object Oriented Programming</h5>
+            <p class="card-text">Object Oriented programming (OOP) is a programming paradigm that relies on the concept
+                of classes and objects. It is used to structure a software program into simple, reusable pieces of code
+                blueprints (usually called classes), which are used to create individual instances of objects.</p>
         </div>
     </div>
 </div>
@@ -22,117 +18,486 @@
 <div class="container">
     <div class="row">
         <div class="col-md-auto">
-            <div class="card bg-light mb-3" style="max-width: fit-content">
-                <div class="card-header text-dark">Branch</div>
-                <div class="card-body text-dark">
-                    <p class="card-text">Branch in Git is similar to the branch of a tree. A tree branch
-                        is attached to the central part of the tree called the trunk. While branches can generate and
-                        fall off, the trunk remains compact and is the only part by which we can say the tree is alive
-                        and standing. </p>
-                    <p>Similarly, a branch in Git is a way to keep developing and coding a new feature or
-                        modification to the software and still not affecting the main part of the project.A branch
-                        represents an independent line of development.
-                        The primary or default branch in Git is the master branch
-                    </p>
-                </div>
-                <div class="card-footer bg-transparent border-dark">
-                    <h6 class="card-title">Command: git branch</h6>
-                    <p>List all our branches. A * will appear next to the currently active branch</p>
+            <div class="card my-2" style="max-width: 950px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/oops.png') }}" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Class</h5>
+                            <p class="card-text">A class is a collection of objects. A class contains the blueprints or
+                                the prototype from which the objects are being created. It is a logical entity that
+                                contains some attributes and methods.</p>
+                            <h5 class="card-title">Objects</h5>
+                            <p class="card-text">object is an entity that has a state and behavior associated with it.
+                                It consists of State, Behavior and Identity.
+                            </p>
 
-                    <h6 class="card-title">Command: git branch [branch-name]</h6>
-                    <p>Create a new branch at the current commit</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-auto">
-            <div class="card bg-light mb-3" style="max-width: 22rem; max-height: fit-content">
-                <div class="card-header text-dark">Repository</div>
-                <div class="card-body text-dark">
-                    <p class="card-text">A Git repository is the .git/ folder inside a project. This repository tracks
-                        all changes made to files in our project, building a history over time. If we delete
-                        the .git/ folder, then we delete our project’s history.</p>
-                </div>
-                <div class="card-footer bg-transparent border-dark">
-                    <h6 class="card-title">Command: git init</h6>
-                    <p>Initialize an existing directory as a Git repository</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-auto">
-            <div class="card bg-light mb-3" style="max-width: 30rem; max-height: fit-content">
-                <div class="card-header text-dark">Merge</div>
-                <div class="card-body text-dark">
-                    <p class="card-text">The git merge command integrates the independent lines of development into a
-                        single branch. The primary use of git merge is to combine two branches. It uses a
-                        non-destructive operation to combine two branches histories without changing them. In addition,
-                        it creates a new merge commit every time it’s used.
-                    </p>
-                </div>
-                <div class="card-footer bg-transparent border-dark">
-                    <h6 class="card-title">Command: git merge [branch]</h6>
-                    <p>Merge the specified branch’s history into the current one</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
+        <div class="col-3 my-2 mx-2">
             <div class="card bg-dark text-white">
-                <img class="card-img" src="{{ url_for('static', filename='images/gitcmd.png') }}" alt="Dev Workflow">
-                <div class="card-footer">
-                    <h5 class="card-title">Git Commands</h5>
-                </div>
-            </div>
-        </div>
-    </div>
+                <img src="{{ url_for('static', filename='images/oops.png') }}" class="card-img"
+                     alt="Image Overlay">
+                <div class="card-img-overlay">
+                    <h6 class="card-title">Sagittis purus</h6>
+                    <p class="card-text"></p>
 
-    <div class="row">
-        <div class="col-md-auto">
-            <div class="card bg-light mb-3" style="max-width: 22rem">
-                <div class="card-header text-dark">Tag</div>
-                <div class="card-body text-dark">
-                    <p class="card-text">Tags are references that point to specific points in Git history. Tagging is
-                        generally used to capture a point in history that is used for a marked version release. A tag is
-                        like a branch that doesn’t change. Unlike branches, tags, after being created,
-                        have no further history of commits.
-                    </p>
-                </div>
-                <div class="card-footer bg-transparent border-dark">
-                    <h6 class="card-title">Command: git tag [tagname]</h6>
-                    <p>Creates a new tag</p>
                 </div>
             </div>
         </div>
-        <div class="col-md-auto">
-            <div class="card bg-light mb-3" style="max-width: 30rem">
-                <div class="card-header text-dark">Commit</div>
-                <div class="card-body text-dark">
-                    <p class="card-text">Commit is used to save our staged changes to the local repository.
-                        We have to explicitly tell Git which changes we want to include in a commit before
-                        running the "git commit" command. This means that a file won't be automatically included in the
-                        next commit just because it was changed. Instead, we need to use the "git add" command to mark
-                        the desired changes for inclusion.
-                    </p>
-                </div>
-                <div class="card-footer bg-transparent border-dark">
-                    <h6 class="card-title">Command: git commit -m [descriptive message]</h6>
-                    <p>Commit our staged content as a new commit snapshot</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card bg-dark text-white">
-                <img class="card-img" src="{{ url_for('static', filename='images/gitmerge.jpeg') }}" alt="Dev Workflow">
-                <div class="card-footer">
-                    <h5 class="card-title">Git Merge</h5>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card my-2" style="max-width: 950px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/oops.png') }}" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">NameSpace</h5>
+                            <p class="card-text">A namespace is a collection of currently defined symbolic names along
+                                with information about the object that each name references. Python consists of four
+                                types of namespaces:
+                            <ul>
+                                <li> Built-In</li>
+                                <li> Global</li>
+                                <li>Enclosing</li>
+                                <li>Local</li>
+                                </li>
+                            </ul>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 my-2 mx-2">
+            <div class="card bg-dark text-white">
+                <img src="{{ url_for('static', filename='images/oops.png') }}" class="card-img"
+                     alt="Image Overlay">
+                <div class="card-img-overlay">
+                    <h6 class="card-title">Sagittis purus</h6>
+                    <p class="card-text">This is a wider card with supporting text below as a natural
+                        lead-in to
+                        additional content. This content is a little bit longer.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card my-2" style="max-width: 950px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/oops.png') }}" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+
+                            <h5 class="card-title">Constructors</h5>
+                            <p class="card-text">Constructors are generally used for instantiating an object. The task
+                                of constructors is to initialize(assign values) to the data members of the class when an
+                                object of the class is created.</p>
+                            <p>In Python the __init__() method is called the
+                                constructor and is always called when an object is created.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 my-2 mx-2">
+            <div class="card" style="width: 22rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Constructor Types</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Default Constructor</h6>
+                    <p class="card-text">Simple Constructor which doesn't accept any arguments</p>
+                    <h6 class="card-subtitle mb-2 text-muted">Parameterized Constructor</h6>
+                    <p class="card-text">Constructor with parameters </p>
+                    <a href="https://www.geeksforgeeks.org/constructors-in-python/" class="card-link">Useful link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-2">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="card">
+                <img class="card-img-top"
+                     src="{{ url_for('static', filename='images/cicd.jpeg') }}" alt="Card image cap">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card">
+                <img class="card-img-top" src="{{ url_for('static', filename='images/docker.jpeg') }}"
+                     alt="Card image cap">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card">
+                <img class="card-img-top"
+                     src="{{ url_for('static', filename='images/cicd.jpeg') }}" alt="Card image cap">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card">
+                <img class="card-img-top"
+                     src="{{ url_for('static', filename='images/docker.jpeg') }}" alt="Card image cap">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card">
+                <img class="card-img-top"
+                     src="{{ url_for('static', filename='images/cicd.jpeg') }}" alt="Card image cap">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card">
+                <img class="card-img-top"
+                     src="{{ url_for('static', filename='images/cicd.jpeg') }}" alt="Card image cap">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card my-2" style="max-width: 950px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/oops.png') }}" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Type Hint</h5>
+                            <p class="card-text">Type hint means providing hints to function to only accept the given
+                                data type.It is a method by which we can force function to accept the desired data
+                                type.</p>
+                            <h5 class="card-title">Type Cast</h5>
+                            <p class="card-text">Converting one datatype into another is known as type casting. It can
+                                be
+                                either Implicit or Explicit type casting.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 my-2 mx-2">
+            <div class="card bg-dark text-white">
+                <img src="{{ url_for('static', filename='images/oops.png') }}" class="card-img"
+                     alt="Image Overlay">
+                <div class="card-img-overlay">
+                    <h6 class="card-title">Sagittis purus</h6>
+                    <p class="card-text"></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card my-2" style="max-width: 950px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/oops.png') }}" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Unit Test</h5>
+                            <p class="card-text">Unit testing involves testing individual components of the software
+                                program or application. The main purpose behind this is to check that all the individual
+                                parts are working as intended.</p>
+                            <p> A unit is known as the smallest possible component of
+                                software that can be tested. Generally, it has a few inputs and a single output.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 my-2 mx-2">
+            <div class="card" style="width: 22rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Advantages of Unit Testing</h5>
+                    <h6 class="card-subtitle mb-2 my-1 text-muted">
+                        <ul>
+                            <li>Process becomes agile</li>
+                            <li>Quality of code improves/li>
+                            <li>Facilitates Change</li>
+                            <li>Reduce Costs</li>
+                            <li>Improves Design</li>
+                            <li>Find Software Bugs Easily</li>
+                        </ul>
+                    </h6>
+                    <a href="https://performancelabus.com/unit-testing-importance/" class="card-link">Useful link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card my-2" style="max-width: 950px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/oops.png') }}" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Fixture</h5>
+                            <p class="card-text">In testing, a fixture provides a defined, reliable and consistent
+                                context for the tests. This could include environment (for example a database configured
+                                with known parameters) or content (such as a dataset).</p>
+                            <p>Fixtures define the steps and data that constitute the arrange phase of a test.
+                                Fixtures are designed to be explicit, modular and scalable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 my-2 mx-2">
+            <div class="card" style="width: 22rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Unit Testing Process</h5>
+                    <p class="card-text">
+                    <ul>
+                        <li>Create the test cases</li>
+                        <li>Review or Rework</li>
+                        <li>Baseline</li>
+                        <li>Execute TestCase</li>
+                    </ul>
+                    </p>
+                    <a href="https://performancelabus.com/unit-testing-importance/" class="card-link">Useful link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-2">
+    <div class="row">
+        <div class="card-group">
+            <div class="card mx-2">
+                <img class="card-img-top" src="{{ url_for('static', filename='images/oops.png') }}"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Property</h5>
+                    <p class="card-text">Property are characteristics or attributes of an object </p>
+                    <h5 class="card-title">Method</h5>
+                    <p class="card-text">Methods are functions defined inside the body of a class. They are used to
+                        define the
+                        behaviors of an object.</p>
+                </div>
+            </div>
+            <div class="card mx-2">
+                <img class="card-img-top" src="{{ url_for('static', filename='images/oops.png') }}"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Static Property</h5>
+                    <p class="card-text">A static property of a class is shared by all instances of that class. Static
+                        keyword is used to define a static property</p>
+                    <h5 class="card-title">Static Method</h5>
+                    <p class="card-text">A static method is a method that is bound to the class and not the object of
+                        the
+                        class. A static method can’t access or modify the class state.
+                        Static methods are used to create utility functions.</p>
+                </div>
+            </div>
+            <div class="card mx-2">
+                <img class="card-img-top" src="{{ url_for('static', filename='images/oops.png') }}"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Instance Property</h5>
+                    <p class="card-text">Instance properties are those properties that are defined inside any class and
+                        require an instance to access them. Without creating instances we cannot access these
+                        properties</p>
+                    <h5 class="card-title">Instance Method</h5>
+                    <p class="card-text">An instance method is a method that belongs to the instances of a class, not to
+                        the class itself.An instance method can access and modify the value of attributes of an
+                        instance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card my-2">
+                <div class="row g-0">
+                    <div class="col-md-3">
+                        <img src="{{ url_for('static', filename='images/oops.png') }}" class="card-img">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Encapsulation</h5>
+                            <p class="card-text">It is the idea of wrapping data and the methods that work on
+                                data within one unit. This puts restrictions on accessing variables directly
+                                and a variable can only be changed by an object’s method.
+                                A class is an example of encapsulation </p>
+                            <h5 class="card-title">Abstraction</h5>
+                            <p class="card-text">Abstraction means that each object should only expose a high-level
+                                mechanism for using it. This mechanism should hide internal implementation details.
+                                It should only reveal operations relevant for the other objects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card my-2">
+                <div class="row g-0">
+                    <div class="col-md-3">
+                        <img src="{{ url_for('static', filename='images/oops.png') }}" class="card-img">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Inheritance</h5>
+                            <p class="card-text">Inheritance is the capability of one class to derive or inherit the
+                                properties from another class. The class that derives properties is called the derived
+                                class or child class and the class from which the properties are being derived is called
+                                the base class or parent class.</p>
+                            <h5 class="card-title">Polymorphism</h5>
+                            <p class="card-text">Polymorphism lets us define methods in the child class that have the
+                                same name as the methods in the parent class.Polymorphism means the same function name
+                                (but different signatures) being used for different types.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card mb-3">
+        <img class="card-img-top" style="max-height: 20pc" src="{{ url_for('static', filename='images/git.png') }}"
+             alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">SOLID - An Acronym for the fist five object-oriented principles by Robert
+                C.Martin</h5>
+            <p class="card-text">
+            <ul>
+                <li>S-Single-responsibility Principle<p>
+                    A class should have one and only one reason to change, meaning that a class should have only one
+                    job.
+                </p></li>
+                <li>O-Open-closed Principle<p>
+                    Objects or entities should be open for extension but closed for modification.
+                </p></li>
+                <li>L-Liskov Substitution Principle<p>
+                    Every subclass or derived class should be substitutable for their base or parent class
+                </p></li>
+                <li>I-Interface Segregation Principle<p>
+                    A class should never be forced to implement an interface that it does not use, or class shouldn’t
+                    be forced to depend on methods they do not use.
+                </p></li>
+                <li>D-Dependency Inversion Principle<p>
+                    Entities must depend on abstractions, not on concretions. High-level module must
+                    not depend on the low-level module, but they should depend on abstractions.
+                </p></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card my-2" style="max-width: 950px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/oops.png') }}" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Pylint</h5>
+                            <p class="card-text">Pylint is a tool that checks for errors in Python code, tries to
+                                enforce a coding standard and looks for code smells. The default coding style used by
+                                Pylint is close to PEP 8. </p>
+                            <p>
+                                Pylint will display a number of messages as it analyzes the code and looks for type
+                                errors and recommend suggestions about how particular blocks can be refactored.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 my-2 mx-2">
+            <div class="card" style="width: 22rem;">
+                <div class="card-body">
+                    <h5 class="card-title">PEP8</h5>
+                    <p class="card-text">A Style Guide for Python Code. It gives coding conventions for the Python code
+                        comprising the standard library in the main Python distribution.</p>
+                    <a href="https://peps.python.org/pep-0008/" class="card-link">Useful link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card mb-3">
+        <img class="card-img-top" style="max-height: 20pc" src="{{ url_for('static', filename='images/git.png') }}"
+             alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Design Patterns : Pre-made blueprints that we can customize
+                to solve a recurring design problem in our code</h5>
+            <h6 class="card-text"> Sections of a Pattern</h6>
+            <ul>
+                <li><strong>Intent</strong> describes both the problem and the solution</li>
+                <li><strong>Motivation</strong> explains the problem and the solution the pattern makes possible</li>
+                <li><strong>Structure</strong> shows each part of the pattern and how they are related</li>
+            </ul>
+            <h6 class="card-text"> Classification of Patterns</h6>
+            <ul>
+                <li><strong>Creational patterns</strong> provide object creation mechanisms that increase flexibility
+                    and reuse of existing code
+                </li>
+                <li><strong>Structural</strong> patterns explain how to assemble objects and classes into larger
+                    structures, while keeping these structures flexible and efficient
+                </li>
+                <li><strong>Behavioral patterns</strong> take care of effective communication and the assignment of
+                    responsibilities between objects
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
