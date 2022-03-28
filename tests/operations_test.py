@@ -24,5 +24,5 @@ def test_calculator_operations_divide():
 
 
 def test_calculator_operations_divide_by_zero():
-    """Testing the Calculator division"""
+    """Testing the Calculator division by zero"""
     assert Division.divide(3, 0) == "Error: Cannot divide by Zero"

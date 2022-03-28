@@ -39,7 +39,7 @@ def test_calculator_multiply_method():
 
 
 def test_calculator_divide_method():
-    """Testing the Calculator Multiplication"""
+    """Testing the Calculator Division"""
 
     # Act for AAA testing
     result = Calculator.divide(tuple_list())
@@ -49,7 +49,7 @@ def test_calculator_divide_method():
 
 
 def test_calculator_divide_by_zero():
-    """Testing the Calculator Multiplication"""
+    """Testing the Calculator Divide by Zero"""
     # Arrange Data for AAA testing
     tuples_list = (3, 0)
 
