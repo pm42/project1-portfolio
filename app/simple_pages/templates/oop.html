@@ -2,18 +2,20 @@
 {% block title %}OOP{% endblock %}
 {% block oop %}active{% endblock %}
 {% block content %}
+
 <div class="container">
-    <div class="card border-dark mb-3 mt-2">
-        <h2 class="card-header">Git - Free and Open Source Distributed Version Control System</h2>
+    <div class="card border-light mb-3 my-2">
+        <h2 class="card-header">Object Oriented Programming </h2>
         <div class="card-body">
             <h5 class="card-title">Introduction</h5>
-            <p class="card-text">Git is a popular version control system. It is used for:
-            <ul>
-                <li>Tracking code changes</li>
-                <li>Tracking who made changes</li>
-                <li>Coding Collaboration</li>
-            </ul>
-            </p>
+            <p class="card-text">Object-Oriented Programming or OOPs refers to languages that uses objects in
+                programming. Object-oriented programming aims to implement real-world entities like inheritance,
+                abstraction, polymorphism and encapsulation in programming. The main aim of OOP is to bind together the
+                data and the functions that operate on them so that no other part of the code can access this data
+                except that function.</p>
+
+            <p class="card-text">This article explains the above principles of object-oriented programming using the
+                calculator program developed by me.</p>
         </div>
     </div>
 </div>
@@ -22,117 +24,286 @@
 <div class="container">
     <div class="row">
         <div class="col-md-auto">
-            <div class="card bg-light mb-3" style="max-width: fit-content">
-                <div class="card-header text-dark">Branch</div>
-                <div class="card-body text-dark">
-                    <p class="card-text">Branch in Git is similar to the branch of a tree. A tree branch
-                        is attached to the central part of the tree called the trunk. While branches can generate and
-                        fall off, the trunk remains compact and is the only part by which we can say the tree is alive
-                        and standing. </p>
-                    <p>Similarly, a branch in Git is a way to keep developing and coding a new feature or
-                        modification to the software and still not affecting the main part of the project.A branch
-                        represents an independent line of development.
-                        The primary or default branch in Git is the master branch
-                    </p>
-                </div>
-                <div class="card-footer bg-transparent border-dark">
-                    <h6 class="card-title">Command: git branch</h6>
-                    <p>List all our branches. A * will appear next to the currently active branch</p>
-
-                    <h6 class="card-title">Command: git branch [branch-name]</h6>
-                    <p>Create a new branch at the current commit</p>
+            <div class="card my-2" style="max-width: 950px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/oop/encapsulation-1.webp') }}" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Encapsulation</h5>
+                            <p class="card-text">
+                                Encapsulation is one of the fundamental concepts in object-oriented programming (OOP).
+                                It describes the idea of wrapping data and the methods that work on data within one
+                                unit. This puts restrictions on accessing variables and methods directly and can prevent
+                                the accidental modification of data.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-auto">
-            <div class="card bg-light mb-3" style="max-width: 22rem; max-height: fit-content">
-                <div class="card-header text-dark">Repository</div>
-                <div class="card-body text-dark">
-                    <p class="card-text">A Git repository is the .git/ folder inside a project. This repository tracks
-                        all changes made to files in our project, building a history over time. If we delete
-                        the .git/ folder, then we delete our project’s history.</p>
-                </div>
-                <div class="card-footer bg-transparent border-dark">
-                    <h6 class="card-title">Command: git init</h6>
-                    <p>Initialize an existing directory as a Git repository</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-auto">
-            <div class="card bg-light mb-3" style="max-width: 30rem; max-height: fit-content">
-                <div class="card-header text-dark">Merge</div>
-                <div class="card-body text-dark">
-                    <p class="card-text">The git merge command integrates the independent lines of development into a
-                        single branch. The primary use of git merge is to combine two branches. It uses a
-                        non-destructive operation to combine two branches histories without changing them. In addition,
-                        it creates a new merge commit every time it’s used.
-                    </p>
-                </div>
-                <div class="card-footer bg-transparent border-dark">
-                    <h6 class="card-title">Command: git merge [branch]</h6>
-                    <p>Merge the specified branch’s history into the current one</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
+        <div class="col-3 my-2 mx-2">
             <div class="card bg-dark text-white">
-                <img class="card-img" src="{{ url_for('static', filename='images/gitcmd.png') }}" alt="Dev Workflow">
-                <div class="card-footer">
-                    <h5 class="card-title">Git Commands</h5>
-                </div>
+                <img src="{{ url_for('static', filename='images/oop/encapsulation.png') }}" class="img-thumbnail"
+                     alt="Image Overlay">
             </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-auto">
-            <div class="card bg-light mb-3" style="max-width: 22rem">
-                <div class="card-header text-dark">Tag</div>
-                <div class="card-body text-dark">
-                    <p class="card-text">Tags are references that point to specific points in Git history. Tagging is
-                        generally used to capture a point in history that is used for a marked version release. A tag is
-                        like a branch that doesn’t change. Unlike branches, tags, after being created,
-                        have no further history of commits.
-                    </p>
-                </div>
-                <div class="card-footer bg-transparent border-dark">
-                    <h6 class="card-title">Command: git tag [tagname]</h6>
-                    <p>Creates a new tag</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-auto">
-            <div class="card bg-light mb-3" style="max-width: 30rem">
-                <div class="card-header text-dark">Commit</div>
-                <div class="card-body text-dark">
-                    <p class="card-text">Commit is used to save our staged changes to the local repository.
-                        We have to explicitly tell Git which changes we want to include in a commit before
-                        running the "git commit" command. This means that a file won't be automatically included in the
-                        next commit just because it was changed. Instead, we need to use the "git add" command to mark
-                        the desired changes for inclusion.
-                    </p>
-                </div>
-                <div class="card-footer bg-transparent border-dark">
-                    <h6 class="card-title">Command: git commit -m [descriptive message]</h6>
-                    <p>Commit our staged content as a new commit snapshot</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card bg-dark text-white">
-                <img class="card-img" src="{{ url_for('static', filename='images/gitmerge.jpeg') }}" alt="Dev Workflow">
-                <div class="card-footer">
-                    <h5 class="card-title">Git Merge</h5>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img class="card-img"
+                 src="{{ url_for('static', filename='images/oop/encapsulation_calc.png') }}"
+                 alt="Card image cap">
+        </div>
+        <div class="col-md-6">
+            <img class="card-img"
+                 src="{{ url_for('static', filename='images/oop/encapsulation_calc_right.png') }}"
+                 alt="Card image cap">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card mb-3 my-1">
+                <div class="card-body">
+                    <h5 class="card-title">Encapsulation in Calculator</h5>
+                    <p class="card-text">
+                        A class is an example of encapsulation as it encapsulates all the data that is member functions,
+                        variables, etc.</p>
+                    <p>
+                        Encapsulation is achieved when each object keeps its state private, inside a class. Other
+                        objects don’t
+                        have direct access to this state. Instead, they can only call a list of public functions —
+                        called
+                        methods.
+                    </p>
+
+                    <p>
+                        As we can see in the above figure, Calculation class encapsulates all the data and methods.
+                        Each instance of this class keep the state of variable <strong> values</strong> as private.
+                        values property is not accessible directly from outside Calculation class. Only way to access
+                        this variable is using the method <strong>get_values().</strong>
+                    </p>
+                    <p>In this way encapsulation is achieved in Calculator</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card my-2" style="max-width: 950px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/oop/abstraction_left.png') }}" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Abstraction</h5>
+                            <p class="card-text">
+                                Abstraction means that each object should only expose a high-level mechanism for using
+                                it and this mechanism should hide internal implementation details. It should only reveal
+                                operations relevant for the other objects. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 my-2 mx-2">
+            <div class="card bg-dark text-white">
+                <img src="{{ url_for('static', filename='images/oop/abstraction_right.jpeg') }}" class="img-thumbnail"
+                     alt="Image Overlay">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img class="card-img"
+                 src="{{ url_for('static', filename='images/oop/abstract_calc_left.png') }}"
+                 alt="Card image cap">
+        </div>
+        <div class="col-md-6">
+            <img class="card-img"
+                 src="{{ url_for('static', filename='images/oop/abstract_calc_right.png') }}"
+                 alt="Card image cap">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card mb-3 my-1">
+                <div class="card-body">
+                    <h5 class="card-title">Abstraction in Calculator</h5>
+                    <p class="card-text">
+                        As we can see in the above figure (right) <strong>get_result</strong> method uses the
+                        <strong>divide</strong> method of Division class to get the division result. But the get_result
+                        method has no idea on how the calculation is being performed
+                        and from its perspective it only cares about the division result and it is least bothered the
+                        underlying functionality.
+                    </p>
+                    <p>
+                        <strong>Division</strong> class hides its implementation(abstraction) from other classes and
+                        exposes a high level mechanism via <strong>divide</strong> method to use it.
+                    </p>
+                    <p>
+                        In this way abstraction is achieved in Calculator.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card my-2" style="max-width: 950px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/oop/inheritance_left.jpeg') }}"
+                             class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Inheritance</h5>
+                            <p class="card-text">
+                                Inheritance is the capability of one class to derive or inherit the properties
+                                from another class.The benefits of inheritance are:
+                            <ul>
+                                <li>It represents real-world relationships well</li>
+                                <li>It provides the re-usability of a code</li>
+                                <li>It is transitive in nature</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 my-2 mx-2">
+            <div class="card bg-dark text-white">
+                <img src="{{ url_for('static', filename='images/oop/inheritance_right.png') }}" class="img-thumbnail"
+                     alt="Image Overlay">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img class="card-img"
+                 src="{{ url_for('static', filename='images/oop/inheritance_calc_right.png') }}"
+                 alt="Card image cap">
+        </div>
+        <div class="col-md-6">
+            <img class="card-img"
+                 src="{{ url_for('static', filename='images/oop/inheritance_calc_left.png') }}"
+                 alt="Card image cap">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card mb-3 my-1">
+                <div class="card-body">
+                    <h5 class="card-title">Inheritance in Calculator</h5>
+                    <p class="card-text">
+                        Here <strong>Multiplication</strong> is the derived class and <strong>Calculation</strong>
+                        is the base class. As derived class inherits the properties of base class, Multiplication
+                        derived class is able to access <strong>get_values()</strong> method though it is
+                        defined in the base class.
+                    </p>
+                    <p>
+                        <strong>Division</strong> class hides its implementation(abstraction) from other classes and
+                        exposes a high level mechanism via <strong>divide</strong> method to use it.
+                    </p>
+                    <p>
+                        In this way inheritance is achieved in Calculator and allow us to reuse the code from
+                        Calculation class.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card my-2" style="max-width: 950px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/oop/poly_left.jpeg') }}"
+                             class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Polymorphism</h5>
+                            <p class="card-text">
+                                In programming, polymorphism means the same function name (but different signatures)
+                                being used for different types.
+                            </p>
+                            <p>
+                                Using polymorphism it is possible to modify a method in a
+                                child class that it has inherited from the parent class. This is particularly useful to
+                                modify the behavior of the parent method based on the child class need.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 my-2 mx-2">
+            <div class="card bg-dark text-white">
+                <img src="{{ url_for('static', filename='images/oop/poly_right.jpeg') }}" class="img-thumbnail"
+                     alt="Image Overlay">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img class="card-img"
+                 src="{{ url_for('static', filename='images/oop/poly_left.png') }}"
+                 alt="Card image cap">
+        </div>
+        <div class="col-md-4">
+            <img class="card-img"
+                 src="{{ url_for('static', filename='images/oop/poly_middle.png') }}"
+                 alt="Card image cap">
+        </div>
+        <div class="col-md-4">
+            <img class="card-img"
+                 src="{{ url_for('static', filename='images/oop/poly_right.png') }}"
+                 alt="Card image cap">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card mb-3 my-1">
+                <div class="card-body">
+                    <h5 class="card-title">Polymorphism in Calculator</h5>
+                    <p class="card-text">
+                        <strong>Addition</strong> and <strong>Multiplication</strong> classes are derived
+                        from the parent class <strong>Calculation</strong>. <strong>get_result()</strong> method is an
+                        abstract method in parent class (no method implementation).
+                    </p>
+                    <p>
+                        Both Addition and Multiplication classes implemented its own behavior for get_result()
+                        method thereby achieving polymorphism.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
