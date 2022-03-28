@@ -1,5 +1,6 @@
 """Calculation, Addition, Multiplication, Subtraction and Division Classes """
 from calculator.operations import Addition as Add, Subtraction as Sub, Multiplication as Mult, Division as Div
+from abc import ABC, abstractmethod
 
 
 class Calculation:
@@ -9,6 +10,10 @@ class Calculation:
     def __init__(self, tuple_list: tuple):
         """ constructor method"""
         self.__values = Calculation.convert_args_to_tuple_of_float(tuple_list)
+
+    @abstractmethod
+    def get_result(self):
+        pass
 
     def get_values(self):
         return self.__values
