@@ -8,7 +8,10 @@ class Calculation:
     # pylint: disable=too-few-public-methods
     def __init__(self, tuple_list: tuple):
         """ constructor method"""
-        self.values = Calculation.convert_args_to_tuple_of_float(tuple_list)
+        self.__values = Calculation.convert_args_to_tuple_of_float(tuple_list)
+
+    def get_values(self):
+        return self.__values
 
     @classmethod
     def create(cls, tuple_list: tuple):
@@ -30,7 +33,7 @@ class Addition(Calculation):
     def get_result(self):
         """get the addition results"""
         sum_of_values = 0.0
-        for value in self.values:
+        for value in self.get_values():
             sum_of_values = Add.add(value, sum_of_values)
         return sum_of_values
 
@@ -41,7 +44,7 @@ class Multiplication(Calculation):
     def get_result(self):
         """get the multiplication results"""
         result = 1.0
-        for value in self.values:
+        for value in self.get_values():
             result = Mult.multiply(result, value)
         return result
 
@@ -52,7 +55,7 @@ class Subtraction(Calculation):
     def get_result(self):
         """get the subtraction results"""
         difference_of_values = 0.0
-        for index, value in enumerate(self.values):
+        for index, value in enumerate(self.get_values()):
             if index == 0:
                 difference_of_values = value
             else:
@@ -66,7 +69,7 @@ class Division(Calculation):
     def get_result(self):
         """get the division results"""
         result = 1.0
-        for index, value in enumerate(self.values):
+        for index, value in enumerate(self.get_values()):
             if index == 0:
                 result = value
             else:
