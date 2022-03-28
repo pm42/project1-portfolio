@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% block title %}AAA{% endblock %}
+{% block aaa %}active{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="card border-light mb-3 my-2">
+        <h2 class="card-header">AAA Testing </h2>
+        <div class="card-body">
+            <h5 class="card-title">Software Testing</h5>
+            <p class="card-text">Software testing is an essential part of the software development process and is done
+                so that only the best product reaches the end-user. It is used to test
+                programs and applications to see if they function according to the specifications.</p>
+            <h5 class="card-title">Importance</h5>
+            <p class="card-text">If any problems persist, they should ideally be taken care of earlier on so that they
+                don’t show up when the final version is sent out to clients. Software unit testing mainly involves
+                checking individual modules for errors and helps to fix errors at the earlier stage itself.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card my-2" style="max-width: 950px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/aaa/aaa.png') }}" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">AAA - A Pattern for writing good tests</h5>
+                            <p class="card-text">
+                            <ul>
+                                <li><strong>Arrange</strong> set up the inputs and targets</li>
+                                <li><strong>Act</strong> cover the main thing to be tested. This could be calling
+                                    a function or method or interacting with a web page
+                                </li>
+                                <li><strong>Assert</strong> expected outcomes. This step determines if the test passes
+                                    or
+                                    fails
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 my-2 mx-2">
+            <div class="card bg-dark text-white">
+                <img src="{{ url_for('static', filename='images/aaa/aaa-pattern.png') }}" class="img-thumbnail"
+                     alt="Image Overlay">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-auto">
+            <div class="card my-2" style="max-width: 950px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/aaa/pytest.png') }}"
+                             class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Pytest</h5>
+                            <p class="card-text">pytest is a mature full-featured Python testing tool that helps us
+                                write better programs.</p>
+                            <p class="card-text">It is a framework that makes it easy to write small tests, yet scales
+                                to support complex functional testing for applications and libraries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 my-2 mx-2">
+            <div class="card" style="width: 22rem;">
+                <div class="card-body bg-dark text-white">
+                    <h5 class="card-title">Features of Pytest</h5>
+                    <p class="card-text">
+                    <ul>
+                        <li>Detailed info on failing assert</li>
+                        <li>Auto-discovery of test modules</li>
+                        <li>Modular fixtures for managing resources</li>
+                        <li>Rich plugin architecture</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card mb-3">
+        <img class="card-img-top" style="max-height: 20pc"
+             src="{{ url_for('static', filename='images/aaa/aaa_ut.png') }}"
+             alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">AAA - Unit Testing</h5>
+            <p class="card-text">
+            <p>Here AAA pattern is used to perform unit testing for the division module.</p>
+            <p>Division by zero is not possible, so we are using AAA pattern to assert that when zero is passed for
+                division, our module throws appropriate error instead of performing the division operations.
+            </p>
+            <p>
+            <ul>
+                <li><strong>Arrange</strong> step initializes the input data as tuples</li>
+                <li><strong>Act</strong> step then calls the divide static method in calculator class and passes the
+                    input data created in arrange step as argument and stores the result in variable result
+                </li>
+                <li><strong>Assert</strong> step then verifies if the variable result contains the error message cannot
+                    divide by zero instead of any numeric values
+                </li>
+            </ul>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container my-2">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top img-thumbnail"
+                     src="{{ url_for('static', filename='images/aaa/pytest1.png') }}" alt="Card image cap">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top img-thumbnail"
+                     src="{{ url_for('static', filename='images/aaa/pytest2.png') }}" alt="Card image cap">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top img-thumbnail"
+                     src="{{ url_for('static', filename='images/aaa/pytest3.png') }}" alt="Card image cap">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card mb-3">
+        <img class="card-img-top" style="max-height: 20pc"
+             src="{{ url_for('static', filename='images/aaa/aaa_ft.png') }}"
+             alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">AAA - Feature Testing</h5>
+            <p class="card-text">
+            <p>Here AAA pattern is used to perform feature testing i.e. Used to check whether the index page is loading
+                properly and the menu link in the index page is working or not.</p>
+            <p>
+            <ul>
+                <li><strong>Arrange</strong> step specifies the URL(in this case index page url) we are going to check
+                </li>
+                <li><strong>Act</strong> step then calls the API get using “requests” with URL as the argument and then
+                    parse the response’s body from JSON into a Python dictionary and stores it in response object
+                </li>
+                <li><strong>Assert</strong> step then verifies that the HTTP status code is 200, meaning “OK”
+                    or “success,” and that the word “Home” appears somewhere in the response’s abstract text.
+                </li>
+            </ul>
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

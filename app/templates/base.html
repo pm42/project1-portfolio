@@ -25,21 +25,33 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
+            <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('simple_pages.show', page='index')}}">Home </a>
+                    <a class="nav-link {% block home %}{% endblock %}" href="{{ url_for('simple_pages.show', page='index')}}">Home </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('simple_pages.show', page='git')}}">Git </a>
+                    <a class="nav-link {% block git %}{% endblock %}" href="{{ url_for('simple_pages.show', page='git')}}">Git </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('simple_pages.show', page='docker')}}">Docker </a>
+                    <a class="nav-link {% block docker %}{% endblock %}" href="{{ url_for('simple_pages.show', page='docker')}}">Docker </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('simple_pages.show', page='flask')}}">Python-Flask </a>
+                    <a class="nav-link {% block flask %}{% endblock %}" href="{{ url_for('simple_pages.show', page='flask')}}">Python-Flask </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('simple_pages.show', page='cicd')}}">CI-CD </a>
+                    <a class="nav-link {% block cicd %}{% endblock %}" href="{{ url_for('simple_pages.show', page='cicd')}}">CI-CD </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% block glossary %}{% endblock %}" href="{{ url_for('simple_pages.show', page='glossary')}}">Glossary </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% block aaa %}{% endblock %}" href="{{ url_for('simple_pages.show', page='aaa')}}">AAA </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% block oop %}{% endblock %}" href="{{ url_for('simple_pages.show', page='oop')}}">OOP </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% block solid %}{% endblock %}" href="{{ url_for('simple_pages.show', page='solid')}}">SOLID </a>
                 </li>
 
             </ul>
