@@ -27,6 +27,7 @@ class Multiplication:
         """ This is the multiply method"""
         return value_1 * value_2
 
+
 class Division:
     """ This is the Division class"""
 

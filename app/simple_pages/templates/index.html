@@ -10,6 +10,10 @@
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="7" aria-label="Slide 3"></button>
 
     </div>
     <div class="carousel-inner">
@@ -34,6 +38,30 @@
             <a href="{{ url_for('simple_pages.show', page='cicd')}}">
                 <img src="{{ url_for('static', filename='images/cicd.jpeg') }}" class="d-block w-100 h-100"
                      alt="CICD"></a>
+        </div>
+
+        <div class="carousel-item">
+            <a href="{{ url_for('simple_pages.show', page='glossary')}}">
+                <img src="{{ url_for('static', filename='images/glossary/oops.png') }}" class="d-block w-100 h-100"
+                     alt="glossary"></a>
+        </div>
+
+        <div class="carousel-item">
+            <a href="{{ url_for('simple_pages.show', page='aaa')}}">
+                <img src="{{ url_for('static', filename='images/aaa/aaa.png') }}" class="d-block w-100 h-100"
+                     alt="aaa"></a>
+        </div>
+
+        <div class="carousel-item">
+            <a href="{{ url_for('simple_pages.show', page='oop')}}">
+                <img src="{{ url_for('static', filename='images/glossary/oops-4.png') }}" class="d-block w-100 h-100"
+                     alt="oop"></a>
+        </div>
+
+        <div class="carousel-item">
+            <a href="{{ url_for('simple_pages.show', page='solid')}}">
+                <img src="{{ url_for('static', filename='images/solid/solid-6.png') }}" class="d-block w-100 h-100"
+                     alt="solid"></a>
         </div>
 
     </div>
